@@ -286,6 +286,12 @@ header{
 }
 /* end registration */
 
+/* start sponsors */
+.sponsors img{
+    max-width: 9rem;
+}
+/* end sponsors */
+
 /* start footer */
 footer{
     background: linear-gradient(180deg, #69C706 0%, #38AA0D 100%);
