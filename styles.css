@@ -35,6 +35,11 @@
 .text-small{
     font-size: 0.9rem;
 }
+.main-head{
+    color: var(--green-color);
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
 *{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -79,6 +84,11 @@ p{
 button{
     outline: none;
 }
+@media (max-width: 576px) {
+    .logo{
+        width: 10rem;
+    }
+}
 @media (max-width: 1200px) {
     html{
         font-size: 90%;
@@ -100,23 +110,6 @@ button{
     }
 }
 /* end global rules */
-
-/* start header */
-@media (max-width: 576px) {
-    .logo{
-        width: 10rem;
-    }
-}
-/* end header */
-
-
-/* start main-head */
-.main-head{
-    color: var(--green-color);
-    font-weight: bold;
-    padding-bottom: 1rem;
-}
-/* end main-head */
 
 
 /* start nav */
@@ -208,19 +201,6 @@ header{
 /* end button group */
 
 
-/* start previous-icon */
-.previous-icon{
-    background: linear-gradient(180deg, #69C706 0%, #38AA0D 100%);
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    padding: 0.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-/* end previous-icon */
-
 /* start swiper card */
 .swiper-card{
     border-color: var(--green-color)!important;
@@ -236,12 +216,25 @@ header{
 }
 /* end swiper card */
 
+
+/* start previous-icon */
+.previous-icon{
+    background: linear-gradient(180deg, #69C706 0%, #38AA0D 100%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* end previous-icon */
+
 /* start countdown */
 #countdown{
     background-color: #00000032;
 }
 /* end countdown */
-
 
 /* start media */
 .media-cards{
