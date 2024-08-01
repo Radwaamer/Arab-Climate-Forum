@@ -35,6 +35,9 @@
 .text-small{
     font-size: 0.9rem;
 }
+.text-smaller{
+    font-size: 0.8rem;
+}
 .main-head{
     color: var(--green-color);
     font-weight: bold;
@@ -297,3 +300,5 @@ footer{
     background: linear-gradient(180deg, #69C706 0%, #38AA0D 100%);
 }
 /* end footer */
+
+/* ----------------------------------------------------------------------------------------------- */
