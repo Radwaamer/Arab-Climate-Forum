@@ -104,14 +104,14 @@ var x = setInterval(function() {
 (()=>{
     // get header and navbar elements
     const header= document.querySelector("header");
-    const nav= document.querySelector("nav");
+    const nav= document.querySelector(".nav");
 
     // set header and navbar className
     header.className="py-5";
-    nav.className="navbar navbar-expand-lg bg-green rounded-top-4 w-100"
 
     // create navbar content
     const navContent= `
+    <nav class="navbar navbar-expand-lg bg-green rounded-top-4 w-100">
         <div class="container">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -156,6 +156,7 @@ var x = setInterval(function() {
                 </ul>
             </div>
         </div>
+    </nav>
     `
     // create header content elements
     const logoDiv = document.createElement("div");
