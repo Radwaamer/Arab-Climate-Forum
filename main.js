@@ -1,110 +1,8 @@
-// swiper
-const swiper = new Swiper('.speakers', {
-    spaceBetween: 30,
-    centeredSlider: true,
-    navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-    },
-    // Optional parameters
-    breakpoints: {
-        0: {
-            slidesPerView: 1.2,
-        },
-        768: {
-            slidesPerView: 2.2,
-        },
-        992: {
-            slidesPerView: 2.2,
-        },
-        1200: {
-            slidesPerView: 3.2,
-        },
-    }
-});
-
-const swiper2 = new Swiper('.previous-speakers', {
-    spaceBetween: 30,
-    centeredSlider: true,
-    navigation: {
-        nextEl: '.swiper2-next',
-        prevEl: '.swiper2-prev',
-    },
-    // Optional parameters
-    breakpoints: {
-        0: {
-            slidesPerView: 2.3,
-        },
-        768: {
-            slidesPerView: 3.3,
-        },
-        992: {
-            slidesPerView: 3.3,
-        },
-        1200: {
-            slidesPerView: 4.3,
-        },
-    }
-});
-
-const swiper3 = new Swiper('.previous-album', {
-    spaceBetween: 10,
-    centeredSlider: true,
-    navigation: {
-        nextEl: '.swiper3-next',
-        prevEl: '.swiper3-prev',
-    },
-    // Optional parameters
-    breakpoints: {
-        0: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        992: {
-            slidesPerView: 3,
-        },
-        1200: {
-            slidesPerView: 4,
-        },
-    }
-});
-
-// countdown
-var countDownDate = new Date("jan 1, 2025 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="countdown"
-    document.getElementById("countdown").innerHTML = seconds + " : " + minutes + " : " + hours + " : " + days;
-        
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-    }
-}, 1000);
-
-
 // handle nav bar at different window screens
 (()=>{
     // get header and navbar elements
     const header= document.querySelector("header");
-    const nav= document.querySelector(".nav");
+    const nav= document.querySelector("nav");
 
     // set header and navbar className
     header.className="py-5";
@@ -164,7 +62,7 @@ var x = setInterval(function() {
     const contactDiv = document.createElement("button");
 
     // create header content inner elemnts
-    logoDiv.innerHTML=`<img class="logo img-fluid" src="assets/logo.png" alt="">`;
+    logoDiv.innerHTML=`<a href="./index.html"><img class="logo img-fluid" src="assets/logo.png" alt=""></a>`;
     signDiv.innerHTML=`<button class="btn btn-green border border-2 border-green py-0 px-4 text-green">تسجيل</button>`;
     contactDiv.innerHTML=`
                     <img src="assets/message.svg" alt="">
@@ -207,4 +105,90 @@ var x = setInterval(function() {
         getScreenSize();
         handleNav()
     });
+})();
+
+
+// add registeration component
+(()=>{
+    const registration= document.getElementById("registration");
+    registration.className="py-5";
+    const registrationContent = `
+    <div class="container">
+        <div class="registration d-flex align-items-center rounded-2">
+            <p class="px-5 text-green">كـُـن جــزءاً من المنتدى</p>
+            <button class="btn d-flex align-items-center gap-4 bg-green rounded-2 text-white px-3">
+                <p>سجّل الآن</p>
+                <img class="img-fluid" src="assets/register.svg" alt="">
+            </button>
+        </div>
+    </div>
+    `
+    registration.innerHTML=registrationContent;
+})();
+
+
+// add footer component
+(()=>{
+    const footer= document.querySelector("footer");
+    footer.className="py-5"
+    const footerContent= `
+    <div class="container">
+        <div class="row text-white">
+
+            <div class="col-lg-5 mb-5">
+                <img class="logo img-fluid" src="assets/logo-footer.png" alt="">
+                <p class="text-small mt-4">المنتدى العربي للمناخ هو نتاج التعاون بين وزارة البيئة وبرنامج الخليج العربي للتنمية «اجفند»، وجامعة الدول العربية والشبكة العربية للمنظمات الأهلية، والمجلس العربي للطفولة والتنمية</p>
+            </div>
+
+            <div class="col-5 col-lg-2 mb-5">
+                <h5 class="fw-bold mb-4">روابط سريعة</h5>
+                <ul class="d-flex flex-column gap-2">
+                    <li><a href="">من نحن</a></li>
+                    <li><a href="">الدورات السابقة</a></li>
+                    <li><a href="">جرين بالعربي</a></li>
+                    <li><a href="">المكتب الإعلامي</a></li>
+                    <li><a href="">المكتبة الرقمية</a></li>
+                    <li><a href="">أسئلة متكررة</a></li>
+                </ul>
+            </div> 
+
+            <div class="col-6 col-lg-3">
+                <h5 class="fw-bold mb-4">تواصل معنا</h5>
+                <ul class="d-flex flex-column gap-3">
+                    <li class="fw-bold">الشبكة العربية للمنظمات الأهلية</li>
+                    <li>
+                        <a class="d-flex align-items-center gap-2" href="">
+                            <img class="icon img-fluid" src="assets/location.svg" alt="">
+                            <span>تقاطع شارعي مكرم عبيد مع منظمة
+                                الصحة العالمية، مدينة نصر، القاهرة، مصر</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex align-items-center gap-2" href="">
+                            <img class="icon img-fluid" src="assets/mail.svg" alt="">
+                            <span>info@anngo.org / media@anngo.org</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex align-items-center gap-2" href="">
+                            <img class="icon img-fluid" src="assets/call.svg" alt="">
+                            <span>+20223493418/417</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 mt-auto">
+                <div class="d-flex gap-2 justify-content-end">
+                    <a class="border border-white rounded-circle d-flex justify-content-center align-items-center px-1" href=""><img src="assets/instagram.svg" alt=""></a>
+                    <a class="border border-white rounded-circle d-flex justify-content-center align-items-center px-1" href=""><img src="assets/twitter.svg" alt=""></a>
+                    <a class="border border-white rounded-circle d-flex justify-content-center align-items-center px-2 py-1" href=""><img src="assets/facebook.svg" alt=""></a>
+                </div>
+                <span class="text-small mt-3 d-flex justify-content-end">جميع الحقوق محفوظة 2023</span>
+            </div>
+
+        </div>
+    </div>
+    `;
+    footer.innerHTML=footerContent;
 })();

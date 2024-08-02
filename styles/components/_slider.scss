@@ -1,0 +1,9 @@
+.swiper button{
+    &:hover{
+        color: $white;
+        background-color: $green;
+    }
+    &:disabled{
+        background-color: $gray;
+    }
+}

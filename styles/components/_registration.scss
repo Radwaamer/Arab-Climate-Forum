@@ -1,0 +1,10 @@
+.registration{
+    border: 1px solid $green;
+    width: fit-content;
+    margin: 0 auto;
+
+    .btn:hover{
+        background-color: $green;
+        color: $white;
+    }
+} 

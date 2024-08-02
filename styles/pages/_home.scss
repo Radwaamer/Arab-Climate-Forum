@@ -1,0 +1,51 @@
+#home{
+    /* start swiper card */
+    .swiper-card{
+        border-color: $green!important;
+        height: 25rem;
+
+        .speaker-img{
+            width: 5rem;
+            height: 5rem;
+            box-shadow: 0px 5px 0px 0px $green;
+        }
+
+        .quotes{
+            height: 1.6rem;
+        }
+    }
+    /* end swiper card */
+
+    /* start countdown */
+    #countdown{
+        background-color: #00000032;
+    }
+    /* end countdown */
+
+    /* start media */
+    .media-cards{
+        height: 33rem;
+    }
+    /* end media */
+
+    /* start feeds */
+    .twitter{
+        background: #1DA1F2;
+    }
+    .instagram{
+        background: linear-gradient(269.39deg, #F21DAA 0%, #E11DF2 101.08%);
+    }
+    .twitter,.instagram{
+        .icon{
+            width: 1.5rem;
+        }
+    }
+    /* end feeds */
+
+    /* start sponsors */
+    .sponsors img{
+        max-width: 9rem;
+    }
+    /* end sponsors */
+
+}

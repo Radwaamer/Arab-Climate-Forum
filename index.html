@@ -10,7 +10,7 @@
 
     <title>المنتدي العربي للمناخ</title>
 </head>
-<body class="d-flex flex-column">
+<body id="home" class="d-flex flex-column justify-content-between">
 
     <!-- start header -->
     <header></header>
@@ -34,7 +34,7 @@
     <!-- end landing photo -->
     
     <!-- start nav -->
-    <div class="nav"></div>
+    <nav></nav>
     <!-- end nav -->
 
     <!-- start about section -->
@@ -81,7 +81,8 @@
         <div class="container py-5 overflow-hidden">
             <h3 class="main-head text-center">قالوا عن المنتدى</h3>
 
-            <div class="speakers swiper mt-5 overflow-visible">
+            <div data-swiperClass=".speakers" data-slidesToShow="3.2" data-spaceBetweenSlides="30"
+            class="speakers swiper mt-5 overflow-visible">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
@@ -151,8 +152,8 @@
                 </div>
 
                 <div class="position-relative pt-5 d-flex justify-content-center gap-4">
-                    <button class="swiper-prev btn text-green fs-4 rounded-circle px-3 py-1 h-100 border fw-bold"> &lt;</button>
-                    <button class="swiper-next btn text-green fs-4 rounded-circle px-3 py-1 h-100 border fw-bold">&gt;</button>
+                    <button class="swiper-prev btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white"> &#129034;</button>
+                    <button class="swiper-next btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white">&#129032;</button>
                 </div>
 
             </div>
@@ -300,17 +301,7 @@
     <!-- end feeds -->
 
     <!-- start registration -->
-    <section class="py-5">
-        <div class="container">
-            <div class="registration d-flex align-items-center rounded-2">
-                <p class="px-5 text-green">كـُـن جــزءاً من المنتدى</p>
-                <button class="btn d-flex align-items-center gap-4 bg-green rounded-2 text-white px-3">
-                    <p>سجّل الآن</p>
-                    <img class="img-fluid" src="assets/register.svg" alt="">
-                </button>
-            </div>
-        </div>
-    </section>
+    <section id="registration"></section>
     <!-- end registration -->
 
     <!-- start sponsors section -->
@@ -409,6 +400,8 @@
     <!-- components -->
     <script src="components/previousPhoto.js"></script>
     <script src="components/previousContent.js"></script>
+    <script src="components/countDown.js"></script>
+    <script src="components/swiper.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+        width: 16px;
+    }
+    &,div{
+        &::-webkit-scrollbar-track{
+            background-color: #fafafa;
+            box-shadow: 0 0 8px #535353 inset;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #878686;
+            border-radius: 7px;
+        }
+    }
+    div::-webkit-scrollbar{
+        width: 10px;
+    }
+}
+
+body{
+    font-family: "Almarai", sans-serif;
+    direction: rtl;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+button{
+    outline: none;
+}
+
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 90%;
+    }
+}
+@media (max-width: 500px) {
+    html{
+        font-size: 80%;
+    }
+}
+@media (max-width: 400px) {
+    html{
+        font-size: 70%;
+    }
+}
+@media (max-width: 300px) {
+    html{
+        font-size: 54%;
+    }
+}

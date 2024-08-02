@@ -1,0 +1,53 @@
+header{
+    direction: ltr;
+}
+.navbar{
+    @include breakPoints("medium"){
+        background-color: transparent;
+    }
+    .navbar-toggler{
+        box-shadow: none !important;
+        border: none;
+    }
+    .navbar-collapse{
+        @include breakPoints("medium"){
+            background-color: $green;
+            padding: 0.6rem;
+        }
+
+        // dropdown menu
+        .dropdown-menu{
+            background-color: $dark_green;
+            transform: translateY(4%);
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            border-radius: 0;
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 25%;
+                transform: translateY(-100%);
+                border-left: 0.4rem solid transparent;
+                border-right: 0.4rem solid transparent;
+                border-bottom: 0.4rem solid $dark_green;
+
+                @include breakPoints("medium"){
+                    right: 50%;
+                }
+            }
+
+            .dropdown-menu li{
+                &:not(:last-child){
+                    border-bottom: solid 1px $gray;
+                    padding-bottom: 0.5rem;
+                }
+                a:hover{
+                    background-color: $green;
+                }
+            }
+
+        }
+    }
+}

@@ -17,7 +17,7 @@
     <!-- end header -->
     
     <!-- start nav -->
-    <div class="nav"></div>
+    <nav></nav>
     <!-- end nav -->
 
     <!-- start previous photo -->
@@ -46,7 +46,8 @@
         <div class="container">
             <h3 class="main-head">المتحدثون</h3>
 
-            <div class="previous-speakers swiper">
+            <div data-swiperClass=".previous-speakers" data-slidesToShow="4.3" data-spaceBetweenSlides="30"
+            class="previous-speakers swiper">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide text-center">
@@ -81,9 +82,9 @@
                     
                 </div>
 
-                <div class="position-relative pt-4 d-flex justify-content-between">
-                    <button class="swiper2-prev btn text-green fs-4 rounded-circle px-3 py-1 h-100 border fw-bold"> &lt;</button>
-                    <button class="swiper2-next btn text-green fs-4 rounded-circle px-3 py-1 h-100 border fw-bold">&gt;</button>
+                <div class="position-relative pt-5 d-flex justify-content-between gap-4">
+                    <button class="swiper-prev btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white"> &#129034;</button>
+                    <button class="swiper-next btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white">&#129032;</button>
                 </div>
 
             </div>
@@ -118,7 +119,8 @@
             <h3 class="main-head text-black">مقتطفات من الدورة الأولى</h3>
         </div>
 
-        <div class="previous-album swiper position-relative px-1">
+        <div data-swiperClass=".previous-album" data-slidesToShow="4" data-spaceBetweenSlides="10"
+        class="previous-album swiper position-relative px-1">
             <div class="swiper-wrapper">
 
                 <div class="swiper-slide"><img class="img-fluid w-100" src="assets/album1.png" alt=""></div>
@@ -130,8 +132,8 @@
             </div>
 
             <div class="position-absolute top-50 end-0 translate-middle-y w-100 pt-5 d-flex justify-content-between px-4 z-1">
-                <button class="swiper3-prev btn text-white bg-green fs-4 rounded-circle px-3 py-1 h-100 fw-bold"> &lt;</button>
-                <button class="swiper3-next btn text-white bg-green fs-4 rounded-circle px-3 py-1 h-100 fw-bold">&gt;</button>
+                <button class="swiper-prev btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white"> &#129034;</button>
+                <button class="swiper-next btn fs-4 rounded-circle h-100 fw-bolder bg-green text-white">&#129032;</button>
             </div>
 
         </div>
@@ -209,6 +211,7 @@
         </div>
     </section>
     <!-- end news -->
+    
 
     <!-- start live section -->
     <section class="live py-5">
@@ -231,17 +234,7 @@
     <!-- end sponsors section -->
 
     <!-- start registration -->
-    <section class="py-5">
-        <div class="container">
-            <div class="registration d-flex align-items-center rounded-2">
-                <p class="px-5 text-green">كـُـن جــزءاً من المنتدى</p>
-                <button class="btn d-flex align-items-center gap-4 bg-green rounded-2 text-white px-3">
-                    <p>سجّل الآن</p>
-                    <img class="img-fluid" src="assets/register.svg" alt="">
-                </button>
-            </div>
-        </div>
-    </section>
+    <section id="registration"></section>
     <!-- end registration -->
 
     <!-- start footer -->
@@ -312,6 +305,7 @@
     <!-- components -->
     <script src="components/previousPhoto.js"></script>
     <script src="components/previousContent.js"></script>
+    <script src="components/swiper.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

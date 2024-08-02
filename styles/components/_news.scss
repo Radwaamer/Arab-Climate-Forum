@@ -1,0 +1,14 @@
+.news-thumbnail{
+    min-width: 12rem;
+}
+.news-resource{
+    max-width: 5rem;
+    filter: grayscale(1);
+}
+.news-desc{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,22 @@
+// abstracts
+@import './styles/utilities/variables';
+@import './styles/utilities/mixins';
+
+// base
+@import './styles/base/reset';
+@import './styles/base/typography';
+
+// layout
+@import './styles/layout/header';
+@import './styles/layout/footer';
+
+// components
+@import './styles/components/buttonGroup';
+@import './styles/components/registration';
+@import './styles/components/slider';
+@import './styles/components/previousStatistics';
+@import './styles/components/news';
+@import './styles/components/video';
+
+// pages
+@import './styles/pages/home';

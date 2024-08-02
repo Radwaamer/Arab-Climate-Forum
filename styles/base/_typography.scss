@@ -1,0 +1,35 @@
+.text-white{
+    color: $white;
+}
+.text-gray{
+    color: $gray;
+}
+.bg-light-gray{
+    background-color: $light_gray;
+}
+.text-green{
+    color: $green;
+}
+.bg-green{
+    background-color: $green;
+}
+.bg-dark-green{
+    background-color: $dark_green;
+}
+.border-green{
+    border-color: $green!important;
+}
+.transition{
+    transition: 0.3s;
+}
+.text-small{
+    font-size: 0.9rem;
+}
+.text-smaller{
+    font-size: 0.8rem;
+}
+.main-head{
+    color: $green;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
