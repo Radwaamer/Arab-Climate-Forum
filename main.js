@@ -5,7 +5,7 @@
     const nav= document.querySelector("nav");
 
     // set header and navbar className
-    header.className="py-5";
+    header.className="py-5 position-relative z-1";
 
     // create navbar content
     const navContent= `
@@ -67,7 +67,7 @@
     contactDiv.innerHTML=`
                     <img src="assets/message.svg" alt="">
                     <span class="text-green">تواصل معنا</span>`;
-    contactDiv.className=`btn d-flex align-items-center gap-2`;
+    contactDiv.className=`btn d-flex align-items-center gap-2 border-0`;
 
     // get screen size
     let largeScreen=false;
@@ -105,25 +105,6 @@
         getScreenSize();
         handleNav()
     });
-})();
-
-
-// add registeration component
-(()=>{
-    const registration= document.getElementById("registration");
-    registration.className="py-5";
-    const registrationContent = `
-    <div class="container">
-        <div class="registration d-flex align-items-center rounded-2">
-            <p class="px-5 text-green">كـُـن جــزءاً من المنتدى</p>
-            <button class="btn d-flex align-items-center gap-4 bg-green rounded-2 text-white px-3">
-                <p>سجّل الآن</p>
-                <img class="img-fluid" src="assets/register.svg" alt="">
-            </button>
-        </div>
-    </div>
-    `
-    registration.innerHTML=registrationContent;
 })();
 
 

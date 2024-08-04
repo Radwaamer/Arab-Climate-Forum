@@ -116,6 +116,16 @@ button {
   padding-bottom: 1rem;
 }
 
+.green-btn, .green-btn:hover, .green-btn:active {
+  background-color: #69C706 !important;
+  color: #FFFFFF !important;
+}
+
+.white-btn, .white-btn:hover, .white-btn:active {
+  background-color: #FFFFFF !important;
+  color: #69C706 !important;
+}
+
 header {
   direction: ltr;
 }
@@ -208,10 +218,6 @@ footer {
   width: fit-content;
   margin: 0 auto;
 }
-.registration .btn:hover {
-  background-color: #69C706;
-  color: #FFFFFF;
-}
 
 .swiper button:hover {
   color: #FFFFFF;
@@ -253,6 +259,16 @@ footer {
   background: linear-gradient(0deg, #69C706 50%, #F5F5F5 50%);
 }
 
+.person-img {
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0px 5px 0px 0px #69C706;
+}
+.person-img.person-head {
+  width: 7rem;
+  height: 7rem;
+}
+
 #home {
   /* start swiper card */
   /* end swiper card */
@@ -268,11 +284,6 @@ footer {
 #home .swiper-card {
   border-color: #69C706 !important;
   height: 25rem;
-}
-#home .swiper-card .speaker-img {
-  width: 5rem;
-  height: 5rem;
-  box-shadow: 0px 5px 0px 0px #69C706;
 }
 #home .swiper-card .quotes {
   height: 1.6rem;
@@ -315,4 +326,8 @@ footer {
 #accordionFlushFAQs .accordion-button:focus {
   box-shadow: none;
   background-color: transparent;
+}
+
+.about header button, .about header span, .about header img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(106%) contrast(101%);
 }/*# sourceMappingURL=styles.css.map */

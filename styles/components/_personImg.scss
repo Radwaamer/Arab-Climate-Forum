@@ -1,0 +1,9 @@
+.person-img{
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0px 5px 0px 0px $green;
+    &.person-head{
+        width: 7rem;
+        height: 7rem;
+    }
+}
