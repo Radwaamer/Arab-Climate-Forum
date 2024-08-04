@@ -294,4 +294,25 @@ footer {
 }
 #home .sponsors img {
   max-width: 9rem;
+}
+
+.agenda img {
+  max-width: 13rem;
+}
+
+.contact img {
+  width: 5rem;
+}
+
+#accordionFlushFAQs {
+  --bs-accordion-bg: transparent !important;
+  --bs-accordion-active-bg: transparent !important;
+}
+#accordionFlushFAQs .accordion-button::after {
+  margin-right: auto;
+  margin-left: inherit;
+}
+#accordionFlushFAQs .accordion-button:focus {
+  box-shadow: none;
+  background-color: transparent;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,14 @@
+#accordionFlushFAQs{
+    --bs-accordion-bg: transparent !important;
+    --bs-accordion-active-bg: transparent !important;
+    .accordion-button{
+        &::after {
+            margin-right: auto;
+            margin-left: inherit;
+        }
+        &:focus{
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+}
