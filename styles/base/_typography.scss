@@ -41,3 +41,8 @@
     background-color: $white !important;
     color: $green !important;
 }
+.logo{
+    @include breakPoints("mobile"){
+        width: 10rem;
+    }
+}

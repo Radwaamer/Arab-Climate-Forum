@@ -1,22 +1,25 @@
-// handle nav bar at different window screens
+// add header component
 (()=>{
-    // get header and navbar elements
     const header= document.querySelector("header");
-    const nav= document.querySelector("nav");
+    header.className="pt-5 text-green";
+    header.innerHTML=`
+    <nav class="navbar navbar-expand-lg py-0">
+        <div class="d-flex justify-content-between flex-wrap flex-lg-column gap-lg-4 w-100 mb-5 mb-lg-0">
 
-    // set header and navbar className
-    header.className="py-5 position-relative z-1";
+            <div class="container d-flex justify-content-lg-between justify-content-around align-items-center col-9 col-lg-12">
+                <div class=""><button class="btn btn-green border border-2 border-green py-0 px-4 text-green">تسجيل</button></div>
+                <div class=""><a href="./index.html"><img class="logo img-fluid" src="assets/logo.png" alt=""></a></div>
+                <div class="btn d-none d-lg-flex align-items-center gap-2 border-0">
+                    <img src="assets/message.svg" alt="">
+                    <span class="text-green">تواصل معنا</span>
+                </div>
+            </div>
 
-    // create navbar content
-    const navContent= `
-    <nav class="navbar navbar-expand-lg bg-green rounded-top-4 w-100">
-        <div class="container">
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler col-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <img class="img-fluid" src="assets/menu.svg" alt="">
             </button>
-
-            <div class="collapse mt-4 mt-lg-0 navbar-collapse" id="navbarNavDropdown">
+            
+            <div class="collapse rounded-top-4 py-1 w-100 bg-green navbar-collapse px-0 mt-3" id="navbarNavDropdown">
                 <ul class="navbar-nav justify-content-around flex-grow-1 text-center text-lg-end">
 
                     <li class="nav-item">
@@ -56,55 +59,6 @@
         </div>
     </nav>
     `
-    // create header content elements
-    const logoDiv = document.createElement("div");
-    const signDiv = document.createElement("div");
-    const contactDiv = document.createElement("button");
-
-    // create header content inner elemnts
-    logoDiv.innerHTML=`<a href="./index.html"><img class="logo img-fluid" src="assets/logo.png" alt=""></a>`;
-    signDiv.innerHTML=`<button class="btn btn-green border border-2 border-green py-0 px-4 text-green">تسجيل</button>`;
-    contactDiv.innerHTML=`
-                    <img src="assets/message.svg" alt="">
-                    <span class="text-green">تواصل معنا</span>`;
-    contactDiv.className=`btn d-flex align-items-center gap-2 border-0`;
-
-    // get screen size
-    let largeScreen=false;
-    const getScreenSize= ()=>{
-        if(window.innerWidth>992){
-            largeScreen=true;
-        }else{
-            largeScreen=false;
-        }
-    };
-
-    // set nav bar depending on screen size
-    const handleNav=()=>{
-        if(largeScreen){
-            nav.innerHTML=navContent;
-            header.innerHTML="";
-            header.className='container py-5 text-green d-flex justify-content-between align-items-center';
-            header.prepend(contactDiv);
-            header.prepend(logoDiv);
-            header.prepend(signDiv);
-        }else{
-            header.innerHTML=navContent;
-            logoDiv.className="d-flex justify-content-between align-items-center";
-            const navContainer= document.querySelector("header .navbar .container");
-            navContainer.prepend(logoDiv);
-            navContainer.prepend(signDiv);
-            nav.innerHTML="";
-        }
-    }
-
-    // fire actions
-    getScreenSize();
-    handleNav();
-    window.addEventListener('resize',()=>{
-        getScreenSize();
-        handleNav()
-    });
 })();
 
 

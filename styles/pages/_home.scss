@@ -1,4 +1,18 @@
 #home{
+
+    // start header
+    @media (min-width: $largeScreen) {
+        header{
+            .navbar-collapse{
+                display: none !important;
+            }
+        }
+        .dropdown-menu{
+            top: 150%;
+        }
+    }
+    // end header
+
     /* start swiper card */
     .swiper-card{
         border-color: $green!important;

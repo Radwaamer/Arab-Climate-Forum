@@ -1,7 +1,17 @@
-.about{
+#about{
     header{
         button,span,img{
             filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(106%) contrast(101%);
+        }
+    }
+    @media (min-width: $largeScreen) {
+        header{
+            .navbar-collapse{
+                display: none !important;
+            }
+        }
+        .dropdown-menu{
+            top: 150%;
         }
     }
 }

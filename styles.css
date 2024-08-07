@@ -126,6 +126,12 @@ button {
   color: #69C706 !important;
 }
 
+@media (max-width: 576px) {
+  .logo {
+    width: 10rem;
+  }
+}
+
 header {
   direction: ltr;
 }
@@ -139,6 +145,9 @@ header {
   box-shadow: none !important;
   border: none;
 }
+.navbar .navbar-collapse {
+  direction: rtl;
+}
 @media (max-width: 992px) {
   .navbar .navbar-collapse {
     background-color: #69C706;
@@ -147,7 +156,6 @@ header {
 }
 .navbar .navbar-collapse .dropdown-menu {
   background-color: #38AA0D;
-  transform: translateY(4%);
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   border-radius: 0;
@@ -155,9 +163,8 @@ header {
 .navbar .navbar-collapse .dropdown-menu::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -7%;
   right: 25%;
-  transform: translateY(-100%);
   border-left: 0.4rem solid transparent;
   border-right: 0.4rem solid transparent;
   border-bottom: 0.4rem solid #38AA0D;
@@ -165,14 +172,15 @@ header {
 @media (max-width: 992px) {
   .navbar .navbar-collapse .dropdown-menu::before {
     right: 50%;
+    top: 29%;
   }
 }
-.navbar .navbar-collapse .dropdown-menu .dropdown-menu li:not(:last-child) {
+.navbar .navbar-collapse .dropdown-menu li:not(:last-child) {
   border-bottom: solid 1px #4F4F4F;
   padding-bottom: 0.5rem;
 }
-.navbar .navbar-collapse .dropdown-menu .dropdown-menu li a:hover {
-  background-color: #69C706;
+.navbar .navbar-collapse .dropdown-menu li a:hover {
+  background-color: #38AA0D !important;
 }
 
 footer {
@@ -281,6 +289,14 @@ footer {
   /* start sponsors */
   /* end sponsors */
 }
+@media (min-width: 992px) {
+  #home header .navbar-collapse {
+    display: none !important;
+  }
+  #home .dropdown-menu {
+    top: 150%;
+  }
+}
 #home .swiper-card {
   border-color: #69C706 !important;
   height: 25rem;
@@ -328,6 +344,14 @@ footer {
   background-color: transparent;
 }
 
-.about header button, .about header span, .about header img {
+#about header button, #about header span, #about header img {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(106%) contrast(101%);
+}
+@media (min-width: 992px) {
+  #about header .navbar-collapse {
+    display: none !important;
+  }
+  #about .dropdown-menu {
+    top: 150%;
+  }
 }/*# sourceMappingURL=styles.css.map */

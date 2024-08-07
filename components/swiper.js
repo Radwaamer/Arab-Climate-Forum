@@ -1,7 +1,6 @@
 (()=>{
 
     Array.from(document.getElementsByClassName("swiper")).forEach(element => {
-        // 
     // get attributes to set swiper properties
     const swiperClass= element.getAttribute("data-swiperClass")
     const slidesToShow= element.getAttribute("data-slidesToShow");
